@@ -214,6 +214,46 @@
             transform: translateY(-2px) scale(1.02);
         }
 
+        /* Guide link styling */
+        .guide-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 300;
+            position: relative;
+            animation: fadeInUp 1s ease-out 1.5s both;
+        }
+
+        .guide-link::before {
+            content: '📖';
+            margin-right: 5px;
+            font-size: 0.8rem;
+        }
+
+        .guide-link:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .guide-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            transition: width 0.3s ease;
+        }
+
+        .guide-link:hover::after {
+            width: 100%;
+        }
+
         /* Floating luxury elements */
         .luxury-elements {
             position: absolute;
@@ -373,6 +413,10 @@
                 padding: 20px 40px;
                 font-size: 1.2rem;
             }
+
+            .guide-link {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -401,6 +445,10 @@
             </p>
             <a href="http://54.253.160.187:8080/login" class="login-btn">
                 Masuk ke Aplikasi
+            </a>
+            <br>
+            <a href="https://drive.google.com/file/d/1xFH91SorKbx2ZNRadIM7irutxolx8SMh/view?usp=sharing" class="guide-link" target="_blank">
+                Panduan Penggunaan
             </a>
         </div>
     </div>
